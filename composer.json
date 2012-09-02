@@ -1,0 +1,6 @@
+{
+    "name": "airos/corebundle",
+    "autoload": {
+        "psr-0": { "Airos\\CoreBundle": "src/" }
+    }
+}
