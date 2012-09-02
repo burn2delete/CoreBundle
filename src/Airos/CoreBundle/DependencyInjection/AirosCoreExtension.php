@@ -35,5 +35,13 @@ class AirosCoreExtension extends Extension
     	}
 
 	}
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	 public function getAlias()
+	 {
+		return "airos_core"; 
+	 }
 
 }
