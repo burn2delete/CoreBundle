@@ -26,11 +26,11 @@ class AirosCoreExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
 		if (!isset($config['setup'])) {
-        	throw new \InvalidArgumentException('The "setup" option must be set to either enable or disable');
-    	} elseif ($config['setup'] == 'enable') {
+        	throw new \InvalidArgumentException('The "setup" option must be set to either true or false');
+    	} elseif ($config['setup'] == 'true') {
 	        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
     	    $loader->load('setup_service.yml');	
-    	} elseif ($config['setup'] == 'disable') {
+    	} elseif ($config['setup'] == 'false') {
     		return;
     	}
 

@@ -1,3 +1,3 @@
-_setup:
-    pattern:  /_setup
+airos_core_setup:
+    pattern:  /
     defaults: { _controller: AirosCoreBundle:Default:index }
