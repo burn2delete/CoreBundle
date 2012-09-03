@@ -31,11 +31,11 @@ class AirosSetupListener
             // don't do anything if it's not the master request
             return;
         }
-		if ($this->request('_route') != '/_setup/')
+		if ($this->request('_route') != 'airos_core_setup')
 		{
-		$request = $this->container->get('request');
-$routeName = $request->get('_route');
-		$event->setResponse(new RedirectResponse($this->router->generate('_setup'), 301));
+            $request = $this->container->get('request');
+            $routeName = $request->get('_route');
+		    $event->setResponse(new RedirectResponse($this->router->generate('_setup'), 301));
 		}
     }
 }
