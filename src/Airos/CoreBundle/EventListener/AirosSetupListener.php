@@ -23,6 +23,11 @@ class AirosSetupListener
 		$this->request = $request;
     }
 
+    public function getRequest()
+	{
+		return $this->request;
+	}
+
     public function onKernelRequest(GetResponseEvent $event)
     {
     	// only check if master request, this allows JSON response still
@@ -30,7 +35,7 @@ class AirosSetupListener
             // don't do anything if it's not the master request
             return;
         }
-		if ($this->request('_route') != 'airos_core_setup')
+		if ($this->getRequest()->request('_route') != 'airos_core_setup')
 		{
 		    $event->setResponse(new RedirectResponse($this->router->generate('_setup'), 301));
 		}
