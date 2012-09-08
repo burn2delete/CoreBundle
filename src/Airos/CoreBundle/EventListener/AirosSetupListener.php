@@ -24,16 +24,21 @@ class AirosSetupListener
 
     public function onKernelRequest(GetResponseEvent $event)
     {
+    	echo 1;
     	print($event->getRequest()->get('_route'));
     	// only check if master request, this allows JSON response still
+    	echo 2;
     	if (HttpKernel::MASTER_REQUEST != $event->getRequestType()) {
             // don't do anything if it's not the master request
             return;
+			echo 2.1;
         }
 				
-		if ($event->getRequest()->get('_route') != '/_setup/')
+		echo 3;
+		if ($event->getRequest()->get('_route') != '_setup')
 		{
-		    $event->setResponse(new RedirectResponse($this->router->generate('/_setup/'), 301));
+			echo 3.1;
+		    $event->setResponse(new RedirectResponse($this->router->generate('airos_core_setup'), 301));
 		}
     }
 }
