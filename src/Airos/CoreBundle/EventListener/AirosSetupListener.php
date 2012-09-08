@@ -31,9 +31,9 @@ class AirosSetupListener
             return;
         }
 				
-		if ($event->getRequest()->get('_route') != 'airos_core_setup')
+		if ($event->getRequest()->get('_route') != '/_setup')
 		{
-		    $event->setResponse(new RedirectResponse($this->router->generate('_setup'), 301));
+		    $event->setResponse(new RedirectResponse($this->router->generate('/_setup/'), 301));
 		}
     }
 }
