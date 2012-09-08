@@ -1,10 +1,10 @@
 parameters:
-    air_os_core.setup_listener.class: Airos\CoreBundle\EventListener\AirosSetupListener
+    airos_core.setup_listener.class: Airos\CoreBundle\EventListener\AirosSetupListener
 
 services:
-    air_os_core.setup_listener:
-        class: %air_os_core.setup_listener.class%
+    airos_core.setup_listener:
+        class: %airos_core.setup_listener.class%
         scope: request
-        arguments: [@router, @request]
+        arguments: [@router]
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
