@@ -25,7 +25,7 @@ class AirosSetupListener
     public function onKernelRequest(GetResponseEvent $event)
     {
     	echo 1;
-    	print($event->getRequest());
+    	print($event->getRequest()->getPathInfo());
     	// only check if master request, this allows JSON response still
     	echo 2;
     	if (HttpKernel::MASTER_REQUEST != $event->getRequestType()) {
