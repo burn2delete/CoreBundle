@@ -1,0 +1,3 @@
+airos_core_main:
+    pattern:  /
+    defaults: { _controller: AirosCoreBundle:Default:index }
