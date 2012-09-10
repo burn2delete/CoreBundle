@@ -6,7 +6,6 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\HttpKernel;
 use Symfony\Component\Routing\Router;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Request;
 
 class AirosSetupListener
 {
@@ -15,8 +14,6 @@ class AirosSetupListener
      */
     private $router;
 	
-	private $request;
-
 	public function __construct(Router $router)
     {
         $this->router = $router;
