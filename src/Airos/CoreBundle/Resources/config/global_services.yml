@@ -1,0 +1,5 @@
+services:
+    airos.twig.extension.airos_libmgmnt:
+        class: Airos\CoreBundle\Twig\AirosLibraryManagementExtension
+        tags:
+            - { name: twig.extension }

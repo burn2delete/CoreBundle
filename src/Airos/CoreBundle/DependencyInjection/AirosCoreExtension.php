@@ -24,11 +24,12 @@ class AirosCoreExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+	    $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+		$loader->load('global_services.yml');
 
 		if (!isset($config['setup'])) {
         	throw new \InvalidArgumentException('The "setup" option must be set to either true or false');
     	} elseif ($config['setup'] == 'true') {
-	        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
     	    $loader->load('setup_service.yml');	
     	} elseif ($config['setup'] == 'false') {
     		return;
