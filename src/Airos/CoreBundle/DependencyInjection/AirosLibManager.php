@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Router;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
- * @Service("airos_core.libmanager", parent="another.service.id", public=false)
+ * Service("airos_core.libmanager", parent="another.service.id", public=false)
  */
 class AirosLibManager
 {

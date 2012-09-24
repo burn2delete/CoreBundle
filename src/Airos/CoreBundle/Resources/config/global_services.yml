@@ -1,5 +1,5 @@
-parameters:
-    airos_core.libmanager.class: Airos\CoreBundle\DependancyInjection\AirosLibManager
+##parameters:
+#    airos_core.libmanager.class: Airos\CoreBundle\DependancyInjection\AirosLibManager
 
 ##services:
 #    airos_core.libmanager:
