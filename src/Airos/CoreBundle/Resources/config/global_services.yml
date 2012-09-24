@@ -1,5 +1,10 @@
+parameters:
+    airos_core.libmanager.class: Airos\CoreBundle\DependancyInjection\AirosLibManager
+
 services:
-    airos.twig.extension.airos_libmgmnt:
-        class: Airos\CoreBundle\Twig\AirosLibraryManagementExtension
+    airos_core.libmanager:
+        class: %airos_core.libmanager.class%
+        scope: request
+        arguments: [@router]
         tags:
-            - { name: twig.extension }
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: -50 }
