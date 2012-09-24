@@ -1,10 +1,10 @@
 parameters:
     airos_core.libmanager.class: Airos\CoreBundle\DependancyInjection\AirosLibManager
 
-services:
-    airos_core.libmanager:
-        class: %airos_core.libmanager.class%
-        scope: request
-        arguments: [@router]
-        tags:
-            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: -50 }
+##services:
+#    airos_core.libmanager:
+#        class: %airos_core.libmanager.class%
+#        scope: request
+#        arguments: [@router]
+#        tags:
+#            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: -50 }
