@@ -15,11 +15,6 @@ use Airos\CoreBundle\Automagic\Loader;
 class AirosAutomagicKernel extends Kernel
 {
 
-    public function __construct($environment, $debug)
-    {
-        parent::__construct($environment, $debug);
-    }
-
     public function registerBundles()
     {
     	$automagic = new AutomagicBundleLoader();
@@ -50,7 +45,7 @@ class AirosAutomagicKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
 
 }
