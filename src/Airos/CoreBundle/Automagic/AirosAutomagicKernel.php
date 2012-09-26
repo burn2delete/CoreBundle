@@ -5,6 +5,7 @@ namespace Airos\CoreBundle\Automagic;
 
 use Symfony\Component\HttpKernel\Kernel;
 use Airos\CoreBundle\Automagic\Loader;
+use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
 
 /**
  * The AirosAutomagicKernel is the heart of the AirOS system.
