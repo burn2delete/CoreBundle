@@ -6,7 +6,7 @@ namespace Airos\CoreBundle\Automagic\Loader;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder;
 
-class AutomagicLoader implements AutomagicLoaderInterface
+class AutomagicBundleLoader
 {
 		
 	/**

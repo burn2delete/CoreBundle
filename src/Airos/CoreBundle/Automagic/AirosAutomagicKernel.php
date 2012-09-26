@@ -22,7 +22,7 @@ class AirosAutomagicKernel extends Kernel
 
     public function registerBundles()
     {
-    	$automagic = new AutomagicLoader();
+    	$automagic = new AutomagicBundleLoader();
 		$automagic->search();
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
