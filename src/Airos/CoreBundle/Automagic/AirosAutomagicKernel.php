@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Airos\CoreBundle\Automagic;
 
 use Symfony\Component\HttpKernel\Kernel;
 use Airos\CoreBundle\Automagic\Loader;
-use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
+use Symfony\Component\DependencyInjection\Loader;
 
 /**
  * The AirosAutomagicKernel is the heart of the AirOS system.
@@ -18,8 +17,8 @@ class AirosAutomagicKernel extends Kernel
 
     public function registerBundles()
     {
-    	$automagic = new AutomagicBundleLoader();
-		$automagic->search();
+        $automagic = new AutomagicBundleLoader();
+        $automagic->search();
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
